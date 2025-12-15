@@ -1,6 +1,6 @@
 # 🃏 Memory Game - Football Edition
 
-A fully functional **Memory Card Game** (Memorama) with a football theme, developed with **Pygame**. This project demonstrates advanced game programming concepts including grid-based layouts, event handling, state management, and interactive gameplay mechanics.
+A fully functional **Memory Card Game** with a football theme, developed with **Pygame**. This project demonstrates advanced game programming concepts including grid-based layouts, event handling, state management, and interactive gameplay mechanics.
 
 ---
 
