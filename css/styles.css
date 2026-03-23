@@ -1,0 +1,757 @@
+/*****************************************************************************************************************************************************************************/
+/*                                                                                                                                                                           */
+/*                                                                  Estilos para el Proyecto SoccerCards                                                                     */
+/*                                                                                                                                                                           */
+/*****************************************************************************************************************************************************************************/
+/*                                                                                                                                                                           */
+/* Autor: Magallanes López Carlos Gabriel                                                                                                                                    */
+/* Versión del Proyecto: 1.0                                                                                                                                                 */
+/* Correo: cgmagallanes23@gmail.com                                                                                                                                          */
+/* Ultima Modificación: 22/03/2025                                                                                                                                           */
+/*                                                                                                                                                                           */
+/*****************************************************************************************************************************************************************************/
+
+
+/* Propiedades Custom para HTML */
+:root {
+    
+    --green:      #00c853;
+    --green-dark: #00952a;
+    --green-dim:  #b9f6ca;
+    --yellow:     #ffd600;
+    --yellow-dim: #fff9c4;
+    --red:        #f44336;
+    --blue:       #1565c0;
+    --blue-light: #42a5f5;
+    --white:      #ffffff;
+    --off-white:  #f8fffe;
+    --text:       #1a2e1a;
+    --text-dim:   #4a6741;
+    --shadow:     rgba(0,0,0,0.12);
+
+}
+
+/* Reset del Selector Global y sus PseudoElementos */
+*, *::before, *::after {margin: 0; padding: 0; box-sizing: border-box;}
+
+/* Habilitamos el Comportamiento del Scroll Suave para Anclas */
+html {scroll-behavior: smooth;}
+
+/* Selector de HTML para el Cuerpo del Documento */        
+body {
+            
+    font-family: 'Nunito', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    overflow-x: hidden;                                                                                                          /* Evita Scroll Horizontal */
+    
+}
+
+/* Selector de HTML y PseudoElemento para el Fondo de Rayas Repetitivas */
+body::before {
+            
+    content: '';
+    position: fixed;
+    inset: 0;                                                                                                                    /* Ocupa Todo el Espacio del Viewport */
+    background-image:
+        repeating-linear-gradient(
+        
+            90deg,
+            rgba(0,200,83,0.04) 0px,
+            rgba(0,200,83,0.04) 40px,
+            transparent 40px,
+            transparent 80px
+        
+        );
+    pointer-events: none;                                                                                                        /* Permite Interactuar con Elementos Debajo del PseudoElemento */
+    z-index: 0;                                                                                                                  /* Coloca el PseudoElemento Detrás del Contenido Principal */
+
+}
+
+/* Selector de HTML para la Barra de Navegación Principal */
+nav {
+            
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;                                                                                                                /* Asegura que la Barra de Navegación Esté Siempre Encima del Contenido */
+    padding: 14px 40px;
+    display: flex;                                                                                                               /* Utiliza Flexbox para Distribuir los Elementos de la Barra de Navegación */
+    justify-content: space-between;                                                                                              /* Distribuye el Logo a la Izquierda y los Enlaces a la Derecha */
+    align-items: center;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);                                                                                                 /* Agrega un Efecto de Desenfoque al Fondo para Mejorar la Legibilidad */
+    border-bottom: 3px solid var(--green);
+    box-shadow: 0 2px 20px rgba(0,200,83,0.15);
+
+}
+
+/* Selector de Clase para el Logo de la Barra de Navegación */
+.nav-logo {
+
+    font-family: 'Boogaloo', cursive;
+    font-size: 1.6rem;
+    color: var(--green-dark);
+    text-decoration: none;
+    display: flex;                                                                                                               /* Utiliza Flexbox para Alinear el Texto y el Icono del Logo */
+    align-items: center;
+    gap: 8px;
+
+}
+
+/* Selector de Clase y Selector de HTML para el Texto del Logo */
+.nav-logo span {
+    
+    color: var(--yellow); 
+    -webkit-text-stroke: 1px var(--green-dark);                                                                                  /* Agrega un Contorno Verde Oscuro al Texto del Logo para Mayor Impacto Visual */
+
+}
+
+
+/* Selector de Clase para los Enlaces de Navegación en la Barra de Navegación */
+.nav-links {
+    
+    display: flex;                                                                                                               /* Utiliza Flexbox para Alinear los Enlaces de Navegación en una Sola Línea */
+    gap: 28px;  
+    list-style: none;                                                                                                            /* Elimina los Puntos de Viñeta de la Lista de Enlaces de Navegación */
+
+}
+
+/* Selector de Clase y Selector de HTML para los Enlaces de Navegación */
+.nav-links a {
+
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto de los Enlaces de Navegación a Mayúsculas */
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s;                                                                                                      /* Agrega una Transición Suave al Cambiar el Color de los Enlaces de Navegación */
+
+}
+
+/* Selectores de Clase, HTML y PseudoClase para el Efecto Hover de los Enlaces de Navegación */
+.nav-links a:hover {color: var(--green-dark);}
+
+/* Selector de Clase para la Sección Principal (Hero) */
+.hero {
+
+    min-height: 100vh;
+    display: flex;                                                                                                               /* Utiliza Flexbox para Centrar el Contenido Principal Vertical y Horizontalmente */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;                                                                                                            /* Evita que los Elementos Flotantes se Desborden Fuera de su Contenedor */
+    background: linear-gradient(160deg, #e8f5e9 0%, #f1f8e9 40%, #e3f2fd 100%);
+    padding-top: 80px;
+
+}
+
+/* Selectores de Clase y PseudoElemento para el Fondo de Rayas Diagonales en Sección Hero */
+.hero::before {
+    
+    content: '';
+    position: absolute;
+    inset: 0;                                                                                                                    /* Ocupa Todo el Espacio del Contenedor Hero */
+    background:
+        linear-gradient(135deg, rgba(0,200,83,0.08) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0,200,83,0.08) 25%, transparent 25%);
+    background-size: 80px 80px;                                                                                                  /* Define el Tamaño de las Rayas Diagonales para Crear un Patrón Repetitivo */
+    pointer-events: none;                                                                                                        /* Permite Interactuar con Elementos Debajo del PseudoElemento */
+
+}
+
+/* Selector de Clase para el Contenedor Interno del Hero */
+.hero-inner {
+
+    position: relative;
+    z-index: 1;                                                                                                                  /* Asegura que el Contenido del Hero Esté Encima del Fondo de Rayas Diagonales */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);                                                                                       /* Crear una Distribución de Dos Columnas para el Contenido del Hero */
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    padding: 0 40px;
+
+}
+
+/* Selector de Clase para el Texto Principal del Hero y su Animación de Entrada */
+.hero-text {animation: slideIn 0.8s ease forwards;}
+
+/* Animación de Entrada para el Texto Principal del Hero */
+@keyframes slideIn {
+            
+    from {opacity: 0; transform: translateX(-40px);}
+    to   {opacity: 1; transform: translateX(0);}
+        
+}
+
+/* Selector de Clase para la Insignia del Hero, que Destaca el Lema o Característica Principal del Juego */
+.hero-badge {
+
+    display: inline-block;                                                                                                       /* Permite que la Insignia se Ajuste al Contenido y se Centre Verticalmente */
+    background: var(--yellow);
+    color: var(--text);
+    font-weight: 900;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto de la Insignia a Mayúsculas para Mayor Impacto Visual */
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--text);
+
+}
+
+/* Selector de Clase para el Título Principal del Hero */
+.hero-title {
+
+    font-family: 'Boogaloo', cursive;
+    font-size: clamp(3rem, 7vw, 5.5rem);                                                                                   
+    line-height: 1;
+    margin-bottom: 12px;
+    color: var(--text);
+
+}
+
+/* Selectores Descedientes para Resaltar Partes del Título Principal del Hero con Colores Diferentes */
+.hero-title .accent {color: var(--green-dark);  display: block;}                                                                 /* Primera Parte Título Principal con Color Verde Oscuro y Coloca en una Nueva Línea */
+.hero-title .accent2 {color: var(--blue); display: block;}                                                                       /* Segunda Parte Título Principal con Color Azul y Coloca en una Nueva Línea */
+
+/* Selector de Clase para la Descripción del Hero, que Proporciona Información Adicional sobre el Juego */
+.hero-desc {
+
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+    line-height: 1.7;
+    font-weight: 600;
+    max-width: 420px;
+
+}
+
+/* Selector de Clase para el Contenedor de Botones del Hero, que Agrupa los Botones de Llamada a la Acción */
+.hero-btns { 
+    
+    display: flex;                                                                                                               /* Utiliza Flexbox para Alinear los Botones de Llamada a la Acción en una Sola Línea */
+    gap: 14px; 
+    flex-wrap: wrap;                                                                                                             /* Permite que Botones se Ajusten a Múltiples Líneas en Pantallas Pequeñas */
+
+}
+
+/* Selectores de Clase para los Botones de Llamada a la Acción en el Hero */
+.btn-primary {
+
+    display: inline-flex;                                                                                                        /* Utiliza Flexbox para Alinear Texto e Icono del Botón Llamada a la Acción Principal */
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: var(--green-dark);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto del Botón Llamada a la Acción Principal a Mayúsculas */
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s;                                                                                                        /* Transición Suave para Todos los Cambios Propiedades al Interactuar Botón Llamada */
+    box-shadow: 0 4px 20px rgba(0,149,42,0.35);
+
+}
+
+/* Selector de Clase y PseudoClase para el Efecto Hover del Botón de Llamada a la Acción Principal en el Hero */
+.btn-primary:hover {
+
+    transform: translateY(-3px);                                                                                                 /* Eleva el Botón Llamada a la Acción Principal al Interactuar */
+    box-shadow: 0 8px 30px rgba(0,149,42,0.5);
+    background: var(--green);
+
+}
+
+/* Selector de Clase para el Botón de Llamada a la Acción Secundaria */
+.btn-secondary {
+
+    display: inline-flex;                                                                                                        /* Utiliza Flexbox para Alinear Texto e Icono del Botón Llamada a la Acción Principal */
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--blue);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto del Botón Llamada a la Acción Principal a Mayúsculas */
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid var(--blue);
+    transition: all 0.3s;                                                                                                        /* Transición Suave para Todos los Cambios Propiedades al Interactuar Botón Llamada */
+
+}
+
+/* Selector de Clase y PseudoClase para el Efecto Hover del Botón de Llamada a la Acción Secundaria en el Hero */
+.btn-secondary:hover {
+
+    background: var(--blue);
+    color: white;
+    transform: translateY(-3px);                                                                                                 /* Eleva el Botón Llamada a la Acción Secundaria al Interactuar */
+
+}
+
+/* Selector de Clase para el Contenedor de Tarjetas Flotantes en el Hero, que Agrega un Toque Visual Dinámico y Atractivo */
+.hero-cards {
+
+    position: relative;
+    height: 400px;
+    animation: floatIn 1s ease 0.3s both;                                                                                        /* Animación de Entrada Tarjetas Flotantes */
+
+}
+
+/* Animación de Entrada para las Tarjetas Flotantes en el Hero */
+@keyframes floatIn {from {opacity: 0; transform: translateY(40px);} to {opacity: 1; transform: translateY(0);}}
+
+/* Selector de Clase para las Tarjetas Flotantes en la Sección Principal */
+.card-float {
+
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 8px 30px var(--shadow);
+    display: flex;                                                                                                               /* Utiliza Flexbox para Centrar el Contenido de las Tarjetas Flotantes */ 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;                                                                                                            /* Evita que Imágenes de Tarjetas Flotantes se Desborden Fuera de su Contenedor */
+    border: 3px solid rgba(0,200,83,0.2);
+    transition: transform 0.3s;                                                                                                  /* Transición Suave para el Efecto Hover de las Tarjetas Flotantes */
+
+}
+
+/* Selector de Clase y Selector de HTML para las Imágenes dentro de las Tarjetas Flotantes en la Sección Principal */
+.card-float img { 
+    
+    width: 85%; 
+    height: 85%; 
+    object-fit: contain;                                                                                                         /* Imágenes se Ajusten sin Distorsión y Mantengan Proporciones Originales */
+
+}
+
+/* Selector de Clase y PseudoClase para el Efecto Hover de las Tarjetas Flotantes en la Sección Principal */
+.card-float:hover {
+    
+    transform: scale(1.08) rotate(2deg) !important;                                                                               /* Aumenta el Tamaño y Rota la Tarjeta Flotante al Interactuar */
+
+}
+
+/* Selectores de Clase y PseudoClase para Posicionar la Primera Tarjeta Flotante */
+.card-float:nth-child(1) {
+    
+    top: 0; 
+    left: 20px; 
+    animation: float1 4s ease-in-out infinite;                                                                                   /* Animación de Flotación para la Primera Tarjeta Flotante */
+
+}
+
+/* Selectores de Clase y PseudoClase para Posicionar la Segunda Tarjeta Flotante */
+.card-float:nth-child(2) {
+    
+    top: 20px; 
+    right: 20px; 
+    animation: float2 4.5s ease-in-out infinite;                                                                                 /* Animación de Flotación para la Segunda Tarjeta Flotante */
+  
+}
+
+/* Selectores de Clase y PseudoClase para Posicionar la Tercera Tarjeta Flotante */
+.card-float:nth-child(3) {
+    
+    bottom: 60px; 
+    left: 60px; 
+    animation: float3 3.8s ease-in-out infinite;                                                                                 /* Animación de Flotación para la Tercera Tarjeta Flotante */
+
+}
+
+/* Selectores de Clase y PseudoClase para Posicionar la Cuarta Tarjeta Flotante */
+.card-float:nth-child(4) {
+    
+    bottom: 0; 
+    right: 60px; 
+    animation: float1 5s ease-in-out infinite;                                                                                   /* Animación de Flotación para la Cuarta Tarjeta Flotante */
+
+}
+
+/* Animaciones de Flotación para las Tarjetas Flotantes en la Sección Principal */
+@keyframes float1 {0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }                                         /* Primera Tarjeta Flotante se Eleva Suavemente y Vuelve a su Posición Original */
+@keyframes float2 {0%,100%{transform:translateY(0) rotate(3deg);} 50%{transform:translateY(-16px) rotate(3deg);}}                /* Segunda Tarjeta Flotante se Eleva Suavemente, Rota y Vuelve a su Posición Original */
+@keyframes float3 {0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-10px) rotate(-2deg);}}              /* Tercera Tarjeta Flotante se Eleva Suavemente, Rota en Sentido Contrario y Vuelve a su Posición Original */
+
+/* Selector de HTML para las Secciones Principales del Sitio */
+section { 
+    
+    padding: 80px 0; 
+    position: relative; 
+    z-index: 1;                                                                                                                  /* Contenido esté Encima del Fondo de Rayas Repetitivas y Otros Elementos de Fondo */
+
+}
+
+/* Selector de Clase para el Contenedor Principal de Cada Sección, que Limita el Ancho del Contenido y Centra Horizontalmente */
+.container {max-width: 1100px; margin: 0 auto; padding: 0 40px;}
+
+/* Selector de Clase para las Etiquetas de Sección, que Destacan el Tema o Categoría de Cada Sección Principal del Sitio */
+.section-tag {
+
+    display: inline-block;                                                                                                       /* Etiqueta de Sección se Ajuste al Contenido y se Centre Verticalmente */
+    background: var(--green-dim);
+    color: var(--green-dark);
+    font-weight: 900;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto de Etiqueta de Sección a Mayúsculas para Mayor Impacto Visual */
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+
+}
+
+/* Selector de Clase para los Títulos de Sección */
+.section-title {
+
+    font-family: 'Boogaloo', cursive;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.1;
+
+}
+
+/* Selector de Clase y Selector de HTML para Resaltar Partes del Título de Sección con Colores Diferentes */
+.section-title span {color: var(--green-dark);}
+
+/* selector de Clase para la Descripción de Sección */
+.teams-section {background: white;}
+
+/* Selector de Clase para el Contenedor de Tarjetas de Equipos en la Sección de Equipos */
+.teams-grid {
+
+    display: grid;                                                                                                               /* Utiliza Cuadrícula CSS para Organizar las Tarjetas de Equipos */
+    grid-template-columns: repeat(4, 1fr);                                                                                       /* Crea una Distribución de Cuatro Columnas para las Tarjetas de Equipos */
+    gap: 20px;
+    margin-top: 40px;
+
+}
+
+/* Selector de Clase para las Tarjetas de Equipos en la Sección de Equipos */
+.team-card {
+
+    background: var(--off-white);
+    border-radius: 24px;
+    padding: 32px 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;                                                                                                        /* Transición Suave para Todos Cambios Propiedades al Interactuar con Tarjetas Equipos */ 
+
+}
+
+/* Selector de Clase y PseudoClase para el Efecto Hover de las Tarjetas de Equipos en la Sección de Equipos */
+.team-card:hover {
+
+    border-color: var(--green);
+    transform: translateY(-6px);                                                                                                 /* Eleva la Tarjeta de Equipo al Interactuar */
+    box-shadow: 0 12px 40px rgba(0,200,83,0.15);
+
+}
+
+/* Selector de Clase y Selector de HTML para las Imágenes dentro de las Tarjetas de Equipos en la Sección de Equipos */
+.team-card img {
+
+    width: 100px;
+    height: 100px;
+    object-fit: contain;                                                                                                         /* Imágenes de Equipos se Ajusten sin Distorsión y Mantengan Proporciones Originales */
+    margin-bottom: 16px;
+
+}
+
+/* Selector de Clase para el Nombre del Equipo y la Liga dentro de las Tarjetas de Equipos en la Sección de Equipos */
+.team-name {font-weight: 900; font-size: 1rem; color: var(--text);}
+
+/* Selector de Clase para la Liga del Equipo dentro de las Tarjetas de Equipos en la Sección de Equipos */
+.team-league {font-size: 0.8rem; color: var(--text-dim); font-weight: 600; margin-top: 4px;}
+
+/* Selector de Clase para la Sección de Cómo Jugar */
+.howto-section {background: linear-gradient(135deg, #e8f5e9, #e3f2fd);}
+
+/* Selector de Clase para el Contenedor de Pasos en la Sección de Cómo Jugar */
+.steps-grid {
+
+    display: grid;                                                                                                               /* Utiliza Cuadrícula CSS para Organizar los Pasos */
+    grid-template-columns: repeat(4, 1fr);                                                                                       /* Crea una Distribución de Cuatro Columnas para los Pasos */
+    gap: 20px;
+    margin-top: 40px;
+
+}
+
+/* Selector de Clase para las Tarjetas de Pasos en la Sección de Cómo Jugar */
+.step-card {
+
+    background: white;
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px var(--shadow);
+    position: relative;
+    overflow: hidden;                                                                                                            /* Evita que Elementos se Desborden Fuera de su Contenedor */
+
+}
+
+/* Selector de Clase y PseudoElemento para la Barra Superior de Color en las Tarjetas de Pasos en la Sección de Cómo Jugar */
+.step-card::before {
+
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--green);
+
+}
+
+/* Selector de Clase para el Número del Paso dentro de las Tarjetas de Pasos en la Sección de Cómo Jugar */
+.step-num {
+
+    width: 50px;
+    height: 50px;
+    background: var(--green-dark);
+    color: white;
+    font-family: 'Boogaloo', cursive;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    display: flex;                                                                                                               /* Utiliza Flexbox para Centrar el Número del Paso dentro de su Contenedor Circular */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+
+}
+
+/* Selector de Clase para el Icono del Paso dentro de las Tarjetas de Pasos en la Sección de Cómo Jugar */
+.step-icon {
+    
+    font-size: 2rem; 
+    margin-bottom: 12px; 
+    display: block;                                                                                                              /* Icono en Elemento de Bloque para que este en Nueva Línea y se Centre Horizontalmente */
+
+}
+
+/* Selector de Clase para el Título */
+.step-title {font-weight: 900; font-size: 1rem; color: var(--text); margin-bottom: 8px;}
+
+/* Selector de Clase para la Descripción del Paso dentro de las Tarjetas de Pasos en la Sección de Cómo Jugar */
+.step-desc {font-size: 0.88rem; color: var(--text-dim); line-height: 1.6; font-weight: 600;}
+
+/* Selector de Clase para la Sección de Vista Previa del Juego */
+.preview-section {background: white;}
+
+/* Selector de Clase para el Contenedor de Vista Previa del Juego, que Muestra Imágenes y Características Destacadas del Juego */
+.preview-grid {
+
+    display: grid;                                                                                                              /* Utiliza Cuadrícula CSS para Organizar el Contenido de Vista Previa del Juego */
+    grid-template-columns: repeat(2, 1fr);                                                                                      /* Crea una Distribución de Dos Columnas para el Contenido de Vista Previa del Juego */
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+/* Selector de Clase para el Contenedor de la Imagen de Vista Previa del Juego */
+.preview-img {
+
+    border-radius: 20px;
+    overflow: hidden;                                                                                                            /* Evita que la Imagen de Vista Previa se Desborde Fuera de su Contenedor */
+    box-shadow: 0 12px 50px rgba(0,0,0,0.12); 
+    border: 3px solid var(--green-dim);
+
+}
+
+/* Selector de Clase y Selector de HTML para la Imagen dentro del Contenedor de Vista Previa del Juego */
+.preview-img img {width: 100%; height: auto; display: block;}
+
+/* Selector de Clase para el Contenedor de Características Destacadas en la Sección de Vista Previa del Juego */
+.preview-features { 
+    
+    display: flex;                                                                                                               /* Utiliza Flexbox para Organizar las Características Destacadas */
+    flex-direction: column;                                                                                                      /* Organiza las Características Destacadas en una Columna Vertical */
+    gap: 16px; 
+
+}
+
+/* Selector de Clase para Cada Característica Destacada dentro de su Contenedor en la Sección de Vista Previa del Juego */
+.feature-item {
+
+    display: flex;                                                                                                               /* Utiliza Flexbox para Organizar las Características Destacadas */
+    align-items: flex-start;                                                                                                     /* Alínea el Icono de la Característica con la Parte Superior del Texto */
+    gap: 16px;
+    padding: 16px;
+    background: var(--off-white);
+    border-radius: 14px;
+    transition: all 0.2s;                                                                                                        /* Transición Suave para Todos Cambios Propiedades */
+
+}
+
+/* Selector de Clase y PseudoClase para el Efecto Hover de Cada Característica Destacada */
+.feature-item:hover {
+
+    background: var(--green-dim);
+    transform: translateX(6px);                                                                                                 /* Desplaza la Característica Destacada Hacia la Derecha al Interactuar */
+
+}
+
+/* Selector de Clase para el Icono de Cada Característica Destacada */
+.feature-icon {
+
+    width: 44px;
+    height: 44px;
+    background: var(--green-dark);
+    border-radius: 12px;
+    display: flex;                                                                                                               /* Utiliza Flexbox para Organizar las Características Destacadas */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;                                                                                                               /* Evita que el Icono se Reduzca de Tamaño si el Contenido de Texto es Muy Largo */
+
+}
+
+/* Selector de Clase para el Contenedor de Texto de Cada Característica Destacada */
+.feature-text h4 {font-weight: 900; font-size: 0.95rem; color: var(--text); margin-bottom: 4px;}
+
+/* Selector de Clase para el Texto de Descripción de Cada Característica Destacada */
+.feature-text p {font-size: 0.85rem; color: var(--text-dim); font-weight: 600;}
+
+/* Selector de Clase para la Sección de Descarga del Juego */
+.download-section {
+    
+    background: var(--green-dark);
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;                                                                                                            /* Que el Contenido Flotante no se Desborde Fuera de su Contenedor */
+
+}
+
+/* Selector de Clase y PseudoElemento para el Fondo de Balón de Fútbol Flotante en la Sección de Descarga del Juego */
+.download-section::before {
+
+    content: '⚽';
+    position: absolute;
+    font-size: 20rem;
+    opacity: 0.04;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);                                                                                            /* Centra el Balón de Fútbol Flotante en el Medio de la Sección de Descarga */
+    pointer-events: none;                                                                                                        /* Permite Interactuar con Elementos Debajo del PseudoElemento del Balón de Fútbol Flotante */
+ 
+}
+
+
+/* Selector Descendiente para Aplicar el Color */
+.download-section .section-title {color: white;}
+
+/* Selector Encadenado de Divisor Inline para Aplicar Color */
+.download-section .section-title span {color: var(--yellow);}
+
+/* Selector de Clase para la Descripción en la Sección de Descarga del Juego */
+.download-section p {color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 480px; margin: 0 auto 36px; font-weight: 600;}
+
+/* Selector de Clase para el Botón de Descarga del Juego en la Sección de Descarga */
+.download-btn {
+
+    display: inline-flex;                                                                                                        /* Utiliza Flexbox para Alinear el Texto y el Icono del Botón de Descarga */
+    align-items: center;
+    gap: 10px;
+    padding: 18px 50px;
+    background: var(--yellow);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;                                                                                                   /* Convierte el Texto del Botón de Descarga a Mayúsculas */
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s;                                                                                                        /* Transición Suave para Todos los Cambios Propiedades al Interactuar Botón Descarga */
+    box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+
+}
+ 
+/* Selector de Clase y PseudoClase para el Efecto Hover del Botón de Descarga del Juego en la Sección de Descarga */
+.download-btn:hover {
+
+    transform: translateY(-4px) scale(1.03);                                                                                     /* Eleva y Aumenta el Tamaño del Botón de Descarga al Interactuar */
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+
+}
+
+/* Selector de Clase para el Contenedor de Requisitos del Sistema en la Sección de Descarga del Juego */
+.req-pills {
+    
+    display: flex;                                                                                                               /* Utiliza Flexbox para Organizar los Requisitos del Sistema en Forma de Etiquetas */
+    justify-content: center; 
+    gap: 12px; 
+    flex-wrap: wrap;                                                                                                             /* Permite que se Ajusten a Múltiples Líneas en Pantallas Pequeñas */     
+    margin-top: 24px;
+
+}
+
+/* Selector de Clase para Cada Etiqueta de Requisito del Sistema en la Sección de Descarga del Juego */
+.req-pill {
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.2);
+
+}
+
+/* Selector de Clase para el Contenedor del Pie de Página */
+footer {background: var(--text); padding: 30px 40px; text-align: center;}
+
+/* Selector de Clase para el Texto del Pie de Página */
+footer p {color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 600;}
+
+/* Selector de Clase y Selector de HTML para los Enlaces dentro del Pie de Página */
+footer a {color: var(--green); text-decoration: none;}
+
+/* Selector de Clase, Selector de HTML y PseudoClase para el Efecto Hover de los Enlaces dentro del Pie de Página */
+footer a:hover {color: var(--green-dim);}
+
+/* Selector de Clase para el Contenedor de Elementos con Animación de Aparición al Hacer Scroll */
+.fade-in {
+    
+    opacity: 0; 
+    transform: translateY(24px);                                                                                                 /* Desplaza el Elemento Hacia Abajo para Fade In */
+    transition: opacity 0.7s ease, transform 0.7s ease;                                                                          /* Transición Suave para la Opacidad y el Desplazamiento al Hacer Scroll */
+
+}
+
+/* Selector de Clase y PseudoClase para Aplicar la Animación de Aparición en Scroll a los Elementos con la Clase "fade-in" */
+.fade-in.visible {opacity: 1; transform: translateY(0);}
+
+/* Responsive Design: Ajustes para Pantallas con Ancho Máximo de 900px (Tablets y Móviles) */
+@media (max-width: 900px) {
+    
+    nav {padding: 14px 20px;}                                                                                                    /* Navegación" Reduce Padding */
+    .nav-links {display: none;}                                                                                                  /* Oculta los Enlaces de Navegación en Pantallas Pequeñas */
+    .hero-inner {grid-template-columns: 1fr; text-align: center;}                                                                /* Hero" Cambia a una Sola Columna y Centra el Texto */
+    .hero-desc {margin: 0 auto 32px;}                                                                                            /* Hero" Centra la Descripción y Agrega Margen Inferior */
+    .hero-btns {justify-content: center;}                                                                                        /* Hero" Centra los Botones de Llamada a la Acción */
+    .hero-cards {height: 260px;}                                                                                                 /* Hero" Reduce la Altura del Contenedor de Tarjetas Flotantes */
+    .card-float {width: 100px; height: 100px;}                                                                                   /* Reduce el Tamaño de las Tarjetas Flotantes */
+    .teams-grid {grid-template-columns: repeat(2, 1fr);}                                                                         /* Equipos" Cambia a Dos Columnas para las Tarjetas de Equipos */
+    .steps-grid {grid-template-columns: repeat(2, 1fr);}                                                                         /* Cómo Jugar" Cambia a Dos Columnas para las Tarjetas de Pasos */
+    .preview-grid {grid-template-columns: 1fr;}                                                                                  /* Vista Previa" Cambia a una Sola Columna para la Imagen y las Características Destacadas */
+    .container {padding: 0 20px;}                                                                                                /* Reduce el Padding del Contenedor Principal en Pantallas Pequeñas */
+
+}
+
+/*****************************************************************************************************************************************************************************/

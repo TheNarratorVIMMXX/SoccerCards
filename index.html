@@ -1,0 +1,207 @@
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- DOCUMENTACIÓN -->
+<!-- Vista para el Proyecto SoccerCards -->
+<!-- Ultima Modificación: 22/03/2025 -->
+<!-- Autor: Magallanes López Carlos Gabriel -->
+<!-- Correo: cgmagallanes23@gmail.com -->
+<!-- Versión: 1.0 -->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Vista para el Proyecto SoccerCards -->
+<!DOCTYPE html>                                                                                                                            <!-- Declaración del Tipo de Documento -->
+<html lang="es">                                                                                                                           <!-- Idioma del Documento: Español -->
+<head>                                                                                                                                     <!-- Metadatos y Recursos -->
+    <meta charset="UTF-8">                                                                                                                 <!-- Codificación de Caracteres: UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                                 <!-- Configuración para Dispositivos Móviles -->
+    <title>SoccerCards — Memorama de Fútbol</title>                                                                                        <!-- Título de la Página -->
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">   <!-- Fuentes Personalizadas: Boogaloo y Nunito -->
+    <link rel="stylesheet" href="css/styles.css">                                                                                          <!-- Hoja de Estilos Principal -->
+</head>
+<body>                                                                                                                                     <!-- Contenido Principal de la Página -->
+    <nav>                                                                                                                                  <!-- Navegación -->
+        <a href="#" class="nav-logo">⚽ Soccer<span>Cards</span></a>                                                                       <!-- Logo de la Página -->
+        <ul class="nav-links">                                                                                                             <!-- Enlaces de Navegación -->
+            <li><a href="#equipos">Equipos</a></li>                                                                                        <!-- Enlace a la Sección de Equipos -->
+            <li><a href="#como-jugar">Cómo Jugar</a></li>                                                                                  <!-- Enlace a la Sección de Cómo Jugar -->
+            <li><a href="#descargar">Descargar</a></li>                                                                                    <!-- Enlace a la Sección de Descargar -->
+        </ul>
+    </nav>
+    <section class="hero">                                                                                                                 <!-- Sección Principal (Hero) -->
+        <div class="hero-inner">                                                                                                           <!-- Contenedor Interno del Hero -->
+            <div class="hero-text">                                                                                                        <!-- Texto del Hero -->
+                <span class="hero-badge">🏆 Edición Fútbol 2025</span>                                                                     <!-- Insignia del Hero -->
+                <h1 class="hero-title"> El Memorama <span class="accent">más Épico</span><span class="accent2">del Fútbol</span></h1>       <!-- Título Principal del Hero -->
+                <p class="hero-desc">                                                                                                       <!-- Descripción del Hero -->
+                    Desafía tu memoria con los escudos de los mejores equipos del mundo. 
+                    ¡Encuentra todos los pares y demuestra que eres un crack!
+                </p>
+                <div class="hero-btns">                                                                                                    <!-- Botones del Hero -->
+                    <a href="#descargar" class="btn-primary">⬇ Descargar Gratis</a>                                                        <!-- Botón para Descargar -->
+                    <a href="#como-jugar" class="btn-secondary">¿Cómo Jugar?</a>                                                           <!-- Botón para Cómo Jugar -->
+                </div>
+            </div>
+            <div class="hero-cards">                                                                                                       <!-- Tarjetas del Hero -->
+                <div class="card-float"><img src="imgs/Barca.png" alt="Barcelona"></div>                                                   <!-- Tarjeta del FC Barcelona -->
+                <div class="card-float"><img src="imgs/Madrid.png" alt="Real Madrid"></div>                                                <!-- Tarjeta del Real Madrid -->
+                <div class="card-float"><img src="imgs/PSG.png" alt="PSG"></div>                                                           <!-- Tarjeta del Paris Saint-Germain -->
+                <div class="card-float"><img src="imgs/Inter.png" alt="Inter"></div>                                                       <!-- Tarjeta del Inter de Milán -->
+            </div>
+        </div>
+    </section>
+    <section class="teams-section" id="equipos">                                                                                           <!-- Sección de Equipos -->
+        <div class="container">                                                                                                            <!-- Contenedor Principal -->
+            <div class="fade-in">                                                                                                          <!-- Contenedor con Efecto de Aparición -->
+                <span class="section-tag">⚽ Los 4 Equipos</span>                                                                          <!-- Etiqueta de la Sección -->
+                <h2 class="section-title">Conoce los <span>Equipos</span></h2>                                                             <!-- Título de la Sección -->
+                <p style="color:var(--text-dim); font-weight:600; font-size:1rem; max-width:500px;">                                       <!-- Texto de la Sección -->
+                    Cuatro grandes clubes del fútbol mundial te esperan. ¿Puedes recordar dónde está cada uno?
+                </p>
+            </div>
+            <div class="teams-grid fade-in">                                                                                               <!-- Cuadrícula de Equipos con Efecto de Aparición -->
+                
+                <!-- Cartas de los Equipos con su Nombre y su Respectiva Liga-->
+                <div class="team-card">     
+                    <img src="imgs/Barca.png" alt="FC Barcelona">
+                    <p class="team-name">FC Barcelona</p>
+                    <p class="team-league">LaLiga · España</p>
+                </div>
+                <div class="team-card">
+                    <img src="imgs/Madrid.png" alt="Real Madrid">
+                    <p class="team-name">Real Madrid CF</p>
+                    <p class="team-league">LaLiga · España</p>
+                </div>
+                <div class="team-card">
+                    <img src="imgs/PSG.png" alt="Paris Saint-Germain">
+                    <p class="team-name">Paris Saint-Germain</p>
+                    <p class="team-league">Ligue 1 · Francia</p>
+                </div>
+                <div class="team-card">
+                    <img src="imgs/Inter.png" alt="Inter de Milán">
+                    <p class="team-name">Inter de Milán</p>
+                    <p class="team-league">Serie A · Italia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="howto-section" id="como-jugar">                                                                                        <!-- Sección de Cómo Jugar -->
+        <div class="container">                                                                                                            <!-- Contenedor Principal -->
+            <div class="fade-in">                                                                                                          <!-- Contenedor con Efecto de Aparición -->
+                <span class="section-tag">🎮 Reglas</span>                                                                                 <!-- Etiqueta de la Sección -->
+                <h2 class="section-title">¿Cómo <span>Jugar</span>?</h2>                                                                   <!-- Título de la Sección -->
+                <p style="color:var(--text-dim); font-weight:600; font-size:1rem; max-width:500px;">                                       <!-- Texto de la Sección -->
+                    Simple, rápido y adictivo. En menos de un minuto estás jugando.
+                </p>
+            </div>
+            <div class="steps-grid fade-in">                                                                                               <!-- Cuadrícula de Pasos con Efecto de Aparición -->
+                
+                <!-- Tarjetas de los Pasos para JUgar con su Número de Paso, Título y Descripción -->
+                <div class="step-card"> 
+                    <div class="step-num">1</div>
+                    <span class="step-icon">🟢</span>
+                    <p class="step-title">Inicia el Juego</p>
+                    <p class="step-desc">Haz clic en "Iniciar Juego" para mezclar las cartas y comenzar la partida.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <span class="step-icon">🃏</span>
+                    <p class="step-title">Voltea una Carta</p>
+                    <p class="step-desc">Haz clic en cualquier carta para revelar qué equipo se esconde debajo.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <span class="step-icon">🔍</span>
+                    <p class="step-title">Encuentra el Par</p>
+                    <p class="step-desc">Voltea una segunda carta. Si coinciden, ¡se quedan! Si no, se ocultan de nuevo.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <span class="step-icon">🏆</span>
+                    <p class="step-title">¡Gana!</p>
+                    <p class="step-desc">Encuentra los 4 pares para ganar. El juego se reinicia automáticamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="preview-section" id="preview">                                                                                         <!-- Sección de Vista Previa -->
+        <div class="container">                                                                                                            <!-- Contenedor Principal -->
+            <div class="fade-in">                                                                                                          <!-- Contenedor con Efecto de Aparición -->
+                <span class="section-tag">📸 Vista Previa</span>                                                                           <!-- Etiqueta de la Sección -->
+                <h2 class="section-title">Así se <span>Ve el Juego</span></h2>                                                             <!-- Título de la Sección -->
+            </div>  
+            <div class="preview-grid fade-in">                                                                                             <!-- Cuadrícula de Vista Previa con Efecto de Aparición -->
+                <div class="preview-img">                                                                                                  <!-- Imagen de Vista Previa del Juego -->
+                    <img src="imgs/SoccerCards.png" alt="Vista del juego">                                                                 <!-- Imagen del Juego SoccerCards -->
+                </div>
+
+                <!-- Características Destacadas del Juego con su Icono, Título y Descripción -->
+                <div class="preview-features"> 
+                    <div class="feature-item">
+                        <div class="feature-icon">🎲</div>
+                        <div class="feature-text">
+                            <h4>Cartas Aleatorias</h4>
+                            <p>Las cartas se mezclan en cada partida para un desafío siempre nuevo.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⏱️</div>
+                        <div class="feature-text">
+                            <h4>Revelación Temporizada</h4>
+                            <p>Las cartas sin par se ocultan después de 1 segundo. ¡Memoriza rápido!</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🖱️</div>
+                        <div class="feature-text">
+                            <h4>Solo Clic del Mouse</h4>
+                            <p>Controles simples e intuitivos. Solo haz clic para jugar.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text">
+                            <h4>Rejugabilidad Infinita</h4>
+                            <p>Cada partida es diferente. El juego se reinicia al ganar automáticamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-section" id="descargar">                                                                                      <!-- Sección de Descargar -->
+        <div class="container">                                                                                                            <!-- Contenedor Principal -->
+            <div class="fade-in">                                                                                                          <!-- Contenedor con Efecto de Aparición -->
+                <span class="section-tag" style="background:rgba(255,255,255,0.15); color:white;">🆓 Gratis</span>                    <!-- Etiqueta de la Sección -->
+                <h2 class="section-title" style="margin-top:10px;">¡Descárgalo <span>Ahora</span>!</h2>                                    <!-- Título de la Sección -->
+                <p>Sin instalaciones, sin dependencias. Solo descarga y juega directo en Windows.</p>                                      <!-- Descripción de la Sección -->
+                <a href="https://github.com/TheNarratorVIMMXX/SoccerCards/releases/latest" class="download-btn" target="_blank">           <!-- Botón de Descarga -->
+                    ⬇ Descargar SoccerCards.exe
+                </a>
+                
+                <!-- Requisitos -->
+                <div class="req-pills"> 
+                    <span class="req-pill">🪟 Windows 7+</span>
+                    <span class="req-pill">💾 ~50 MB</span>
+                    <span class="req-pill">🧠 2 GB RAM</span>
+                    <span class="req-pill">⚡ Sin instalación</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>
+            © 2025 Magallanes López Carlos Gabriel &nbsp;·&nbsp; 
+            <a href="https://github.com/TheNarratorVIMMXX/SoccerCards" target="_blank">GitHub</a> 
+            &nbsp;·&nbsp; <a href="https://mailto:cgmagallanes23@gmail.com">Contacto</a>
+        </p>
+    </footer>
+
+    <!-- Script Principal -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
