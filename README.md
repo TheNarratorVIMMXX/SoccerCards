@@ -1,244 +1,298 @@
-# 🃏 Juego de Memoria - Edición Fútbol
+[![es](https://img.shields.io/badge/lang-es-red.svg)](README.es.md)
 
-Un **Juego de Memoria con Cartas** completamente funcional con temática de fútbol, desarrollado con **Pygame**. Este proyecto demuestra conceptos de programación de videojuegos, incluyendo diseños en cuadrícula, manejo de eventos, gestión de estados y mecánicas de juego interactivas.
+# 🃏 Memory Game - Soccer Edition
 
----
+![Python](https://img.shields.io/badge/Python-3.13.0-blue?style=for-the-badge&logo=python&logoColor=white)
+![Pygame](https://img.shields.io/badge/Pygame-Library-FF6B6B?style=for-the-badge&logo=python&logoColor=white)
+![Type](https://img.shields.io/badge/Type-Memory_Game-8B008B?style=for-the-badge)
+![Pairs](https://img.shields.io/badge/Pairs-4-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0-gold?style=for-the-badge)
 
-## 👨‍🎓 Información del Desarrollador
-
-- **Autor:** Magallanes López Carlos Gabriel
-- **Correo:** cgmagallanes23@gmail.com
-- **Fecha de Desarrollo:** 15 de octubre de 2025
-
----
-
-## 🎮 Descripción del Juego
-
-Este es un clásico juego de memorama con logos de equipos de fútbol. Los jugadores deben encontrar pares de cartas iguales voltéandolas de dos en dos. El juego incluye:
-
-- **Diseño en cuadrícula** con 8 cartas (4 pares) organizadas en una cuadrícula de 2x4
-- **Mecánica de volteo de cartas** con animaciones de revelación fluidas
-- **Sistema de detección de pares** para cartas emparejadas
-- **Funcionalidad de ocultamiento automático** para pares que no coinciden
-- **Detección de victoria** cuando se encuentran todos los pares
-- **Aleatorización** de posiciones de cartas para mayor rejugabilidad
-- **Botón de inicio interactivo** para comenzar nuevas partidas
+A fully functional **Soccer-themed Memory Card Game** developed with **Pygame**. This project demonstrates video game programming concepts including grid layouts, event handling, state management, and interactive game mechanics.
 
 ---
 
-## 🎯 Mecánicas de Juego
+## 🎬 Preview
 
-### Controles
-- **Clic del Mouse**: Seleccionar y voltear cartas
-- **Botón de Inicio**: Comenzar una nueva partida con cartas mezcladas
-
-### Objetivo
-Encontrar los 4 pares de cartas de equipos de fútbol recordando sus posiciones. Las cartas se voltean de regreso si no coinciden.
-
-### Reglas del Juego
-1. Haz clic en el botón "Iniciar juego" para comenzar
-2. Haz clic en cualquier carta para revelarla
-3. Haz clic en una segunda carta para intentar encontrar un par
-4. Si las cartas coinciden, permanecen reveladas
-5. Si las cartas no coinciden, se voltean después de 1 segundo
-6. Continúa hasta encontrar todos los pares
-7. El juego se reinicia automáticamente cuando ganas
+<div align="center">
+  <img src="assets/gifs/preview.gif" alt="Soccer Cards Preview"/>
+</div>
 
 ---
 
-## 🚀 Características
+## 👨‍🎓 Developer Info
 
-### ✨ Características Principales de Juego
-- **Sistema de Cuadrícula de Cartas**: Diseño en cuadrícula 2x4 con 4 logos únicos de equipos de fútbol
-- **Detección de Pares**: Comparación automática de cartas seleccionadas
-- **Revelación Temporizada**: Las cartas sin par se ocultan después de 1 segundo
-- **Condición de Victoria**: Detección automática de victoria y reinicio del juego
-- **Mezcla de Cartas**: Posiciones aleatorias al inicio del juego
-- **Gestión de Estados**: Seguimiento de cartas descubiertas y mostradas
-
-### 🎨 Elementos Visuales
-- **Logos de Equipos de Fútbol**: PSG, Real Madrid, Barcelona e Inter de Milán
-- **Diseño del Reverso de las Cartas**: Diseño gris limpio para cartas ocultas
-- **Resaltado de Bordes**: Bordes negros alrededor de cada carta
-- **Botón de Inicio**: Botón verde que se vuelve blanco durante el juego
-- **Renderizado Fluido**: Juego a 60 FPS
-
-### 🎮 Elementos Interactivos
-- **Detección de Clics**: Seguimiento preciso de la posición del mouse
-- **Estados del Botón**: Retroalimentación visual para el botón de inicio
-- **Estados de las Cartas**: Tres estados (oculta, mostrada, descubierta)
-- **Bloqueo de Turno**: Evita clics durante la comparación de cartas
+- **Author:** Carlos Gabriel Magallanes López
+- **Email:** cgmagallanes23@gmail.com
+- **Development Date:** October 15, 2025
 
 ---
 
-## 📦 Requisitos
+## 🎮 Game Description
 
-### Descarga
-El juego está disponible como ejecutable, **no requiere instalar Python ni ninguna dependencia adicional**.
+This is a classic Memorama game featuring soccer team logos. Players must find matching card pairs by flipping two at a time. The game includes:
 
-> 📥 Descarga el archivo `.exe` desde la sección de [Releases](https://github.com/TheNarratorVIMMXX/SoccerCards/releases) y ejecútalo directamente.
-
----
-
-### 🖥️ Requisitos del Sistema
-- **SO:** Windows 7/8/10/11
-- **RAM:** 2GB
-- **Almacenamiento**: ~50 MB de espacio libre
+- **Grid layout** with 8 cards (4 pairs) arranged in a 2×4 grid
+- **Card flip mechanics** with smooth reveal animations
+- **Pair detection system** for matched cards
+- **Auto-hide functionality** for non-matching pairs
+- **Win detection** when all pairs are found
+- **Card randomization** for replayability
+- **Interactive start button** to begin new games
 
 ---
 
-## 🎮 Cómo Ejecutar
+## 🎯 Game Mechanics
 
-1. **Descarga el ejecutable** desde la sección de [Releases](https://github.com/TheNarratorVIMMXX/SoccerCards/releases)
-2. **Haz doble clic** en el archivo `.exe`
-3. **¡Listo!** El juego abrirá directamente, sin instalaciones ni configuraciones adicionales
+### Controls
+
+| Control | Action |
+|---------|--------|
+| **Mouse Click** | Select and flip cards |
+| **Start Button** | Begin a new game with shuffled cards |
+
+### Objective
+Find all 4 soccer team card pairs by remembering their positions. Cards flip back if they don't match.
+
+### Game Rules
+1. Click the "Start Game" button to begin
+2. Click any card to reveal it
+3. Click a second card to try to find a match
+4. If the cards match, they stay revealed
+5. If they don't match, they flip back after 1 second
+6. Continue until all pairs are found
+7. The game resets automatically when you win
 
 ---
 
-## 🔧 Implementación Técnica
+## 🚀 Features
 
-### Arquitectura del Juego
+### ✨ Core Game Features
+- **Card Grid System:** 2×4 grid layout with 4 unique soccer team logos
+- **Pair Detection:** Automatic comparison of selected cards
+- **Timed Reveal:** Unmatched cards hide after 1 second
+- **Win Condition:** Automatic win detection and game reset
+- **Card Shuffle:** Random positions at game start
+- **State Management:** Tracking of revealed and discovered cards
+
+### 🎨 Visual Elements
+- **Soccer Team Logos:** PSG, Real Madrid, Barcelona, and Inter Milan
+- **Card Back Design:** Clean grey design for hidden cards
+- **Border Highlight:** Black borders around each card
+- **Start Button:** Green button that turns white during gameplay
+- **Smooth Rendering:** 60 FPS gameplay
+
+### 🎮 Interactive Elements
+- **Click Detection:** Precise mouse position tracking
+- **Button States:** Visual feedback for the start button
+- **Card States:** Three states (hidden, shown, discovered)
+- **Turn Lock:** Prevents clicks during card comparison
+
+---
+
+## 🔧 Technical Implementation
+
+### Game Architecture
 
 ```python
-# Componentes Principales:
-1. Clase Carta (Diseño orientado a objetos)
-2. Configuración de Pantalla (Ventana Pygame)
-3. Sistema de Diseño en Cuadrícula (Arreglo 2D)
-4. Ciclo de Manejo de Eventos
-5. Gestión de Estados
+# Main Components:
+1. Card Class (Object-Oriented Design)
+2. Screen Setup (Pygame Window)
+3. Grid Layout System (2D Array)
+4. Event Handling Loop
+5. State Management
 ```
 
-## 🎨 Diseño Visual
+### Data Structures
+```python
+# Card states
+hidden    → Grey rectangle (not yet flipped)
+shown     → Team logo visible (being compared)
+discovered → Team logo permanently visible (matched)
 
-### Paleta de Colores
-- **Fondo**: Blanco (`#FFFFFF`)
-- **Reverso de Carta**: Gris (`#CECECE`)
-- **Borde de Carta**: Negro (`#000000`)
-- **Botón de Inicio (Activo)**: Verde (`#00FF00`)
-- **Botón de Inicio (Jugando)**: Blanco (`#FFFFFF`)
-- **Texto del Botón**: Dinámico (Blanco/Gris según el estado)
+# Game states
+not_started → Waiting for start button
+playing     → Active game session
+won         → All pairs found, auto-reset
+```
 
-### Estados de las Cartas
-1. **Oculta**: Rectángulo gris con borde negro
-2. **Mostrada**: Logo del equipo visible
-3. **Descubierta**: Logo del equipo permanentemente visible
+### Key Algorithms
 
----
+#### Card Shuffle
+```python
+Random Shuffle Algorithm:
+- Generate random positions for all 8 cards
+- Swap cards to randomize placement
+- Guarantees fair distribution each game
+```
 
-## 🐛 Limitaciones Conocidas
-
-- Tamaño de ventana fijo de 800x450 (no redimensionable)
-- Solo 4 pares de cartas (8 en total)
-- Sin sistema de puntuación ni temporizador
-- Sin niveles de dificultad
-
----
-
-## 📚 Resultados de Aprendizaje
-
-Este proyecto sirve como recurso educativo para comprender conceptos fundamentales del desarrollo de videojuegos:
-
-### 🎓 Lo que Aprenderás
-
-1. **Programación Orientada a Objetos**
-   - Diseño y encapsulamiento de clases
-   - Atributos y métodos de instancia
-   - Gestión del estado de objetos
-   - Sugerencias de tipo y validación
-
-2. **Fundamentos de Pygame**
-   - Configuración de ventana y pantalla
-   - Arquitectura del ciclo de eventos
-   - Manejo de entrada del mouse
-   - Renderizado de superficies e imágenes
-   - Detección de colisiones con rectángulos
-
-3. **Lógica de Juego en Cuadrícula**
-   - Manipulación de arreglos 2D
-   - Conversión de sistemas de coordenadas
-   - Algoritmos de recorrido de cuadrícula
-   - Mapeo de posición a índice
-
-4. **Gestión de Estados**
-   - Seguimiento del estado del juego (no iniciado, jugando, ganado)
-   - Máquinas de estado de cartas (oculta, mostrada, descubierta)
-   - Implementación de lógica por turnos
-   - Banderas booleanas para control del juego
-
-5. **Programación Orientada a Eventos**
-   - Manejo de eventos de clic del mouse
-   - Procesamiento de eventos
-   - Lógica de interacción con botones
-
-6. **Temporización y Retrasos**
-   - Mecánicas basadas en tiempo con `time.time()`
-   - Ocultamiento retrasado de cartas
-   - Control de tasa de fotogramas con `clock.tick()`
-   - Implementación de retrasos sin bloqueo
-
-7. **Algoritmos de Aleatorización**
-   - Técnicas de mezcla de cartas
-   - Generación de posiciones aleatorias
-   - Garantía de distribución equitativa
-
-8. **Diseño del Ciclo de Juego**
-   - Estructura del ciclo de renderizado
-   - Separación de actualización y renderizado
-   - Gestión de FPS
-   - Actualizaciones continuas del estado del juego
-
-9. **Detección de Colisiones**
-   - Colisión punto-rectángulo (`collidepoint`)
-   - Validación de límites de cuadrícula
-   - Detección del área de clic
-
-10. **Renderizado Visual**
-    - Carga y blitting de imágenes
-    - Dibujo de rectángulos
-    - Renderizado de texto
-    - Orden de renderizado por capas
+#### Timed Hide Logic
+```python
+Delayed Hide Mechanic:
+- Record time.time() when second card is flipped
+- Check elapsed time each frame
+- Hide after 1 second if no match
+- Non-blocking implementation
+```
 
 ---
 
-### 🎯 Habilidades Desarrolladas
+## 🎨 Visual Design
 
-Al estudiar y modificar este código, obtendrás experiencia práctica con:
+### Color Palette
 
-✅ **Patrones de diseño de juegos** y arquitectura  
-✅ **Gestión de memoria** en juegos de memorama  
-✅ **Diseño de interfaz de usuario** para juegos en cuadrícula  
-✅ **Validación de entrada** y manejo de errores  
-✅ **Implementación de algoritmos** (mezcla, emparejamiento)  
-✅ **Organización del código** con clases y funciones  
+| Element | Color | Hex |
+|---------|-------|-----|
+| **Background** | White | `#FFFFFF` |
+| **Card Back** | Grey | `#CECECE` |
+| **Card Border** | Black | `#000000` |
+| **Start Button (Active)** | Green | `#00FF00` |
+| **Start Button (Playing)** | White | `#FFFFFF` |
+| **Button Text** | Dynamic | White/Grey by state |
 
-Este repositorio es perfecto para estudiantes que aprenden Pygame, fundamentos del desarrollo de videojuegos, o cualquier persona interesada en entender cómo funcionan programáticamente los clásicos juegos de memoria.
-
----
-
-## 📄 Licencia
-
-Este proyecto es de naturaleza educativa y está disponible para uso libre con fines de aprendizaje. Los logos de los equipos de fútbol son propiedad de sus respectivos dueños y se utilizan únicamente con fines educativos.
-
----
-
-## 🤝 Contribuciones
-
-Estudiantes y desarrolladores son bienvenidos a:
-- Reportar errores
-- Sugerir nuevas características o temáticas
-- Enviar pull requests con mejoras
-- Compartir estrategias de juego
-- Agregar nuevas temáticas de cartas
+### Card States
+1. **Hidden:** Grey rectangle with black border
+2. **Shown:** Team logo visible
+3. **Discovered:** Team logo permanently visible
 
 ---
 
-## 📧 Contacto
+## 📊 System Requirements
+
+| Component | Requirement |
+|-----------|-------------|
+| **OS** | Windows 7 / 8 / 10 / 11 |
+| **RAM** | 2 GB |
+| **Storage** | ~50 MB free space |
+| **Dependencies** | None — bundled in executable |
+
+---
+
+## 📥 Download & Run
+
+### Quick Start — No Installation!
+
+The game is available as an executable — **no Python or dependencies required**.
+
+1. **Download** the `.exe` from [Releases](https://github.com/TheNarratorVIMMXX/SoccerCards/releases)
+2. **Double-click** the `.exe` file
+3. **Play immediately** — no setup or configuration needed!
+
+---
+
+## 🐛 Known Limitations
+
+- Fixed window size of 800×450 (not resizable)
+- Only 4 card pairs (8 total)
+- No scoring system or timer
+- No difficulty levels
+
+---
+
+## 📚 Learning Outcomes
+
+This project serves as an educational resource for understanding fundamental video game development concepts:
+
+### 🎓 What You'll Learn
+
+1. **Object-Oriented Programming**
+   - Class design and encapsulation
+   - Instance attributes and methods
+   - Object state management
+   - Type hints and validation
+
+2. **Pygame Fundamentals**
+   - Window and display setup
+   - Event loop architecture
+   - Mouse input handling
+   - Surface and image rendering
+   - Rectangle-based collision detection
+
+3. **Grid Game Logic**
+   - 2D array manipulation
+   - Coordinate system conversion
+   - Grid traversal algorithms
+   - Position-to-index mapping
+
+4. **State Management**
+   - Game state tracking (not started, playing, won)
+   - Card state machines (hidden, shown, discovered)
+   - Turn-based logic implementation
+   - Boolean flags for game control
+
+5. **Event-Driven Programming**
+   - Mouse click event handling
+   - Event processing pipeline
+   - Button interaction logic
+
+6. **Timing and Delays**
+   - Time-based mechanics with `time.time()`
+   - Delayed card hiding
+   - Frame rate control with `clock.tick()`
+   - Non-blocking delay implementation
+
+7. **Randomization Algorithms**
+   - Card shuffling techniques
+   - Random position generation
+   - Fair distribution guarantee
+
+8. **Game Loop Design**
+   - Rendering loop structure
+   - Update and render separation
+   - FPS management
+   - Continuous game state updates
+
+9. **Collision Detection**
+   - Point-rectangle collision (`collidepoint`)
+   - Grid boundary validation
+   - Click area detection
+
+10. **Visual Rendering**
+    - Image loading and blitting
+    - Rectangle drawing
+    - Text rendering
+    - Layered rendering order
+
+### 🎯 Skills Developed
+
+By studying and modifying this code, you'll gain hands-on experience with:
+
+✅ **Game design patterns** and architecture  
+✅ **Memory management** in memorama-style games  
+✅ **User interface design** for grid-based games  
+✅ **Input validation** and error handling  
+✅ **Algorithm implementation** (shuffling, matching)  
+✅ **Code organization** with classes and functions  
+
+This repository is perfect for students learning Pygame, video game development fundamentals, or anyone interested in understanding how classic memory games work programmatically.
+
+---
+
+## 🤝 Contributions
+
+Students and developers are welcome to:
+- Report bugs
+- Suggest new features or themes
+- Submit pull requests with improvements
+- Share gameplay strategies
+- Add new card themes
+
+---
+
+## 📄 License
+
+This project is educational in nature and available for free use for learning purposes. Soccer team logos are property of their respective owners and are used for educational purposes only.
+
+---
+
+## 📧 Contact
 
 **Carlos Gabriel Magallanes López**  
-Correo: cgmagallanes23@gmail.com  
+Email: cgmagallanes23@gmail.com
 
 ---
 
-**⭐ ¡Si disfrutaste este juego o te resultó educativo, dale una estrella en GitHub!**
+⭐ **If you enjoyed this game or found it educational, give it a star on GitHub!**
 
-**🎮 ¡Buen juego!**
+**🎮 Have fun playing!**
