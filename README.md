@@ -3,7 +3,7 @@
 # 🃏 Memory Game - Soccer Edition
 
 ![Python](https://img.shields.io/badge/Python-3.13.0-blue?style=for-the-badge&logo=python&logoColor=white)
-![Pygame](https://img.shields.io/badge/Pygame-Library-FF6B6B?style=for-the-badge&logo=python&logoColor=white)
+![Pygame](https://img.shields.io/badge/Pygame-2.6.1-FF6B6B?style=for-the-badge&logo=python&logoColor=white)
 ![Type](https://img.shields.io/badge/Type-Memory_Game-8B008B?style=for-the-badge)
 ![Pairs](https://img.shields.io/badge/Pairs-4-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
